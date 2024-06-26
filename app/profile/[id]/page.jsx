@@ -1,12 +1,10 @@
 "use client";
-import { useRouter, useParams, useSearchParams } from "next/navigation";
+import { useParams, useSearchParams } from "next/navigation";
 import React, { useState, useEffect } from "react";
-import Profile from "@components/profile";
-import PromptCard from "@components/PromptCard";
+import Profile from "@components/Profile";
 
 const UserProfile = () => {
   const { id } = useParams();
-  const router = useRouter();
   const searchParams = useSearchParams(); // used because there is no endpoint that gives username
   const username = searchParams.get("username"); // used because there is no endpoint that gives username
 
