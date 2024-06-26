@@ -36,7 +36,11 @@ const Feed = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response = await fetch("/api/prompt");
+      const response = await fetch("/api/prompt", {
+        headers: {
+          "Cache-Control": "no-cache",
+        },
+      });
       const data = await response.json();
       setPosts(data);
       setFilteredPosts(data); // Initialize filtered posts
@@ -67,7 +71,7 @@ const Feed = () => {
     filterPosts();
   }, [searchText, posts]);
 
-return (
+  return (
     <section className="feed">
       <form className="relative w-full flex-center">
         <input
