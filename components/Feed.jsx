@@ -82,7 +82,7 @@ const Feed = () => {
         />
       </form>
 
-      <div className="mt-16 prompt_layout">
+      <div className="mt-16 prompt_layout  min-h-[45vh]">
         {filteredPosts.map((post) => (
           <PromptCard
             key={post._id}

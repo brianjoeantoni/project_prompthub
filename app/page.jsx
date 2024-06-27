@@ -1,7 +1,6 @@
 // in next.js, we no longer need to specify the react import
 // import React from 'react'
 import Feed from "@components/Feed";
-import PromptCard from './../components/PromptCard';
 
 const Home = () => {
   return (
@@ -15,7 +14,7 @@ const Home = () => {
         discover, create and share creative prompts
       </p>
 
-      <Feed />
+      <Feed  />
     </section>
   );
 };
