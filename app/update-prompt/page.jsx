@@ -14,7 +14,11 @@ const EditPrompt = () => {
 
   useEffect(() => {
     const getPromptDetails = async () => {
-      const response = await fetch(`/api/prompt/${promptId}`);
+      const response = await fetch(`/api/prompt/${promptId}?timestamp=${new Date().getTime()}`, {
+        headers: {
+          'Cache-Control': 'no-cache',
+        },
+      });
       const data = await response.json();
       setPost({ prompt: data.prompt, tag: data.tag });
     };
@@ -30,6 +34,9 @@ const EditPrompt = () => {
     try {
       const response = await fetch(`/api/prompt/${promptId}`, {
         method: "PATCH",
+        headers: {
+          'Cache-Control': 'no-cache',
+        },
         body: JSON.stringify({
           prompt: post.prompt,
           tag: post.tag,
