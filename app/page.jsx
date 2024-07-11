@@ -7,14 +7,14 @@ const Home = () => {
     <section className="w-full flex-center flex-col">
       <h1 className="head_text text-center">
         Discover & Share <br className="max-md:hidden" />{" "}
-        <span className="orange_gradient text-center"> AI-Powered Prompts</span>
+        <span className="blue_gradient text-center"> AI-Powered Prompts</span>
       </h1>
       <p className="desc text-center">
-        Promptopia is an open-source AI prompting tool for modern world to
-        discover, create and share creative prompts
+        Discover, create, and share AI-powered prompts with a global community.
+        PromptHub is your one-stop destination for AI-generated creativity.
       </p>
 
-      <Feed  />
+      <Feed />
     </section>
   );
 };

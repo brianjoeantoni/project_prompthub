@@ -5,8 +5,8 @@ import Footer from "@components/Footer";
 import Provider from "@components/Provider";
 
 export const metadata = {
-  title: "Promptopia",
-  description: "Discover & Share AI Prompts",
+  title: "PromptHub",
+  description: "Discover, Create & Share AI-Powered Prompts with a Global Community",
 };
 const RootLayout = ({ children }) => {
   return (
